@@ -10,9 +10,9 @@ function calcCenturyPastEra(year) {
 function runB1() {
     try {
         let userYear = parseInt(prompt('Введите год целым числом'));
-        alert(calcCentury(userYear) + 'век');
         try {
             (userYear / Math.abs(userYear) + 1) / 2;
+            alert(calcCentury(userYear) + 'век');
         } catch(ex) {
             alert(Math.abs(calcCenturyPastEra(userYear)) + 'век до нашей эры');
             return;
