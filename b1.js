@@ -1,10 +1,7 @@
 'use strict'
 
 function calcCentury(year) {
-    return Math.floor(year/100 + 1);
-}
-function calcCenturyPastEra(year) {
-    return Math.ceil(year/100 - 1);
+    return Math.floor(Math.abs(year)/100 + 1);
 }
 
 function runB1() {
@@ -20,7 +17,7 @@ function runB1() {
             console.log('Исключение не сработало');
             alert(calcCentury(userYear) + ' век');
         } catch(ex) {
-            alert(Math.abs(calcCenturyPastEra(userYear)) + ' век до нашей эры');
+            alert(calcCentury(userYear) + ' век до нашей эры');
             console.log('Исключение отработало');
         }
     } catch(ex) {
