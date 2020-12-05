@@ -4,7 +4,7 @@ function calcCentury(year) {
     return (Math.floor((year/100) + 1));
 }
 function calcCenturyPastEra(year) {
-    return (Math.floor(year/100));
+    return (Math.ceil(year/100));
 }
 
 function runB1() {
