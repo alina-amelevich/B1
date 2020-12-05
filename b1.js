@@ -6,8 +6,14 @@ function calcCentury(year) {
 
 function runB1() {
     try {
-        let userYear = parseInt(prompt('Введите год нашей эры целым числом'));
-        alert(calcCentury(userYear) + 'век');
+        let userYear = parseInt(prompt('Введите год целым числом'));
+        try {
+            ((userYear / Math.abs(userYear) + 1) / 2) / 2;
+            alert(calcCentury(userYear) + 'век');
+        } catch(ex) {
+            alert(Math.abs(calcCenturyPastEra(userYear)) + 'век до нашей эры');
+            return;
+        }
     } catch(ex) {
         alert('Что-то пошло не так, попробуйте еще раз!');
     }
